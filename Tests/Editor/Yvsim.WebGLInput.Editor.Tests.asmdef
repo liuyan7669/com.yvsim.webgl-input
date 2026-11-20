@@ -1,0 +1,14 @@
+{
+  "name": "Yvsim.WebGLInput.Editor.Tests",
+  "references": [
+    "Yvsim.WebGLInput",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ]
+}

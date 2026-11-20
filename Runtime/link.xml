@@ -1,0 +1,20 @@
+<linker>
+  <assembly fullname="Yvsim.WebGLInput" preserve="all" />
+  <assembly fullname="UnityEngine.WebGLModule" ignoreIfMissing="1">
+    <type fullname="UnityEngine.WebGLInput" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI" ignoreIfMissing="1">
+    <type fullname="UnityEngine.UI.InputField" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.PointerEventData" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.PointerInputModule" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.PointerInputModule+MouseButtonEventData" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.ExecuteEvents" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.IPointerUpHandler" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.IEndDragHandler" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro" ignoreIfMissing="1">
+    <type fullname="TMPro.TMP_InputField" preserve="all" />
+  </assembly>
+</linker>

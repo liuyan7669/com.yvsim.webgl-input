@@ -1,0 +1,40 @@
+{
+  "name": "com.yvsim.webgl-input",
+  "version": "1.0.0",
+  "displayName": "WebGL Input",
+  "description": "为桌面浏览器中的 Unity WebGL 输入框提供 HTML 输入桥，适合需要中文输入、复制粘贴、文本选择及全屏编辑的 UGUI/TMP 界面。\n\n主要功能：\n1. 自动识别已聚焦的 TMP_InputField 或 uGUI InputField，无需挂载桥接组件或修改默认 WebGL 模板。\n2. 同步中文 IME 组合输入、候选确认、文本与选区，处理正反向拖选、方向键和不同输入框的 Enter 行为。\n3. 支持浏览器纯文本剪贴板及常用 Ctrl/Cmd 编辑快捷键，处理失焦、拖出 Canvas 和指针取消后的恢复。\n4. 适配 Unity 的全屏入口，并提供向指定/聚焦输入框插入文本及读取选中文字的 C# 接口。\n\n使用说明：拖选恢复面向 StandaloneInputModule 与传统 Input Manager/Both。新 Input System、移动浏览器和 UI Toolkit TextField 不属于完整兼容目标；所需 UI 包与中文字体需自行安装。Editor 输入正常不等于浏览器 IME 已实测。",
+  "unity": "2021.3",
+  "author": {
+    "name": "Yvsim"
+  },
+  "license": "MIT",
+  "keywords": [
+    "webgl",
+    "input",
+    "ime",
+    "clipboard",
+    "textmeshpro",
+    "ugui"
+  ],
+  "samples": [
+    {
+      "displayName": "Fullscreen Controls",
+      "description": "提供可绑定 Button 的全屏控制组件，覆盖 Screen.fullScreen 和两种 Screen.SetResolution 入口。示例不包含预制输入场景；请在现有 TMP/uGUI 场景中绑定按钮并构建 WebGL，验证全屏期间的文本输入。",
+      "path": "Samples~/Fullscreen Controls"
+    }
+  ],
+  "dependencies": {
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.ui": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuyan7669/com.yvsim.webgl-input.git"
+  },
+  "documentationUrl": "https://github.com/liuyan7669/com.yvsim.webgl-input#readme",
+  "changelogUrl": "https://github.com/liuyan7669/com.yvsim.webgl-input/blob/main/CHANGELOG.md",
+  "bugs": {
+    "url": "https://github.com/liuyan7669/com.yvsim.webgl-input/issues"
+  },
+  "licensesUrl": "https://github.com/liuyan7669/com.yvsim.webgl-input/blob/main/LICENSE.md"
+}

@@ -12,7 +12,7 @@
 2. 等待 Unity 完成依赖解析和编译。也可将本包完整目录放入工程的 `Packages/`，作为 Embedded Package。
 
 本包不依赖 Inspector Groups 或其他 Yvsim 包。所需 Unity 依赖由 `package.json` 声明并由 UPM 解析。
-本地源码安装不要求 OpenUPM。仓库和注册表重新发布前，不应把 Git tag 或注册表中的 `1.0.0` 当作已可用版本。
+本包提供本地源码、Git 和 OpenUPM 安装方式；固定版本使用 `1.0.0`，具体步骤见下文。
 
 本包通过反射访问 TMP/uGUI，不强制安装这两个 UI 包。项目需自行使用至少一种受支持的输入框，并安装相应 UI 包和字体。
 本包最低支持 Unity 2021.3；更高版本仍需检查反射与 WebGL 模板行为。
@@ -111,4 +111,22 @@ Unity EditMode 测试需要 Test Framework、uGUI 和 TMP，并把 `com.yvsim.we
 https://github.com/liuyan7669/com.yvsim.webgl-input.git#main
 ```
 
-此地址指向 main 分支，当前包版本为 1.0.0。本次上传不创建版本 tag 或 GitHub Release，也不代表已在 OpenUPM 登记；Unity 官方依赖仍按 package.json 解析。
+此地址跟随 main 分支。需要固定 1.0.0 源码时，将 `#main` 改为 `#v1.0.0`；Unity 官方依赖仍按 package.json 解析。
+
+## 从 OpenUPM 安装
+
+在 Unity 的 Project Settings > Package Manager 中添加 Scoped Registry：
+
+- Name：OpenUPM
+- URL：`https://package.openupm.com`
+- Scope：`com.yvsim`
+
+然后在 Package Manager 中通过 Add package by name 输入 `com.yvsim.webgl-input`，版本填 `1.0.0`。也可从 My Registries 中选择本包。声明的 Yvsim 依赖由 OpenUPM 解析，Unity 官方依赖仍由 Unity 注册表提供。
+
+如果已安装 OpenUPM CLI，可在工程根目录执行：
+
+```sh
+openupm add com.yvsim.webgl-input@1.0.0
+```
+
+[OpenUPM 包页面](https://openupm.com/packages/com.yvsim.webgl-input/)
